@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:QuizApp"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             xmlns:CustomControl="clr-namespace:QuizApp.CustomControls"
+             xmlns:CustomControl="clr-namespace:QuizApp"
              d:DesignHeight="500" d:DesignWidth="300">
     <UserControl.Template>
         <ControlTemplate>

@@ -48,10 +48,11 @@ namespace QuizApp
                 MessageBox.Show("Check internet connection. Server problem.");
                 return;
             }
+            Constants.LoginData = loginData;
             swithcWindow();
         }
 
-        private async void SingUp_Clicked(object sender, RoutedEventArgs e)
+        private void SingUp_Clicked(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(nameOfUser.Text) || string.IsNullOrEmpty(countryOfUser.Text) ||
                 string.IsNullOrEmpty(passwordOfUser.Password) || string.IsNullOrEmpty(emailOfUser.Text) ||
@@ -60,20 +61,10 @@ namespace QuizApp
                 signUpWarrningMessage.Visibility = Visibility.Visible;
                 return;
             }
-            SignUpDataModel data = new SignUpDataModel()
-            {
-                Name = nameOfUser.Text,
-                Country = countryOfUser.Text,
-                Username = emailOfUser.Text,
-                Password = passwordOfUser.Password,
-            };
-            ResponseDataModel response = await Constants.sendPostRequest<ResponseDataModel>(Constants.BASE_URL + "/user", data);
-            if (response.Response == null || !response.Response.ToLower().Equals("ok"))
-            {
-                MessageBox.Show("Check internet connection.");
-                return;
-            }
-            swithcWindow();
+            Constants.USERNAME = nameOfUser.Text;
+            SecondSignUp mSecondSignUp = new SecondSignUp();
+            mSecondSignUp.Show();
+            Close();
         }
         private void swithcWindow()
         {

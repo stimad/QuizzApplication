@@ -1,0 +1,100 @@
+﻿<Window x:Class="QuizApp.SecondSignUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuizApp"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d" Height="600" Width="1080" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="20"/>
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <Grid Height="60" VerticalAlignment="Top" Background="#2D3E50" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackPanel WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" 
+                        HorizontalAlignment="Right" Width="800">
+                <Grid HorizontalAlignment="Right">
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="40" />
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="closeButton" Padding="0" Width="30" Height="20" Grid.Column="2" 
+                            Margin="0 2 0 0" Click="closeButton_Click" Background="{x:Null}" BorderBrush="{x:Null}">
+                        <materialDesign:PackIcon Kind="Close" Width="20" Foreground="Gray"/>
+                    </Button>
+                </Grid>
+            </StackPanel>
+            <Grid VerticalAlignment="Bottom" Height="40" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="9*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" 
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Left" 
+                            Margin="60 0 0 0" 
+                            Height="30"  >
+                    <TextBlock 
+                        x:Name="Title"
+                        Text="Hi user"
+                        FontSize="22" 
+                        FontWeight="Bold"
+                        Padding="5 0 0 0"
+                        Foreground="White"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"/>
+
+                </StackPanel>
+                <materialDesign:PopupBox HorizontalAlignment="Right" Margin="5 5 10 5" Height="20"
+                                         PlacementMode="BottomAndAlignRightEdges" StaysOpen="False"
+                                         Grid.Column="2" RenderTransformOrigin="0.5,0.5">
+                    <materialDesign:PopupBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </materialDesign:PopupBox.RenderTransform>
+                    <materialDesign:PopupBox.ToggleContent>
+                        <materialDesign:PackIcon Kind="DotsHorizontal"  Foreground="White" Width="20"/>
+                    </materialDesign:PopupBox.ToggleContent>
+                    <StackPanel Width="150">
+                        <Button Content="Account" />
+                        <Button Content="Settings" />
+                        <Button Content="Help" />
+                    </StackPanel>
+                </materialDesign:PopupBox>
+            </Grid>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="40" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="GridMenu" 
+                      Width="40" 
+                      HorizontalAlignment="Left" 
+                      Background="#21283E">
+                <Grid Height="200"
+                      VerticalAlignment="Top">
+                <Rectangle Height="400"
+                           VerticalAlignment="Top">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush EndPoint="0.5, 1" StartPoint="0.5, 0">
+                            <GradientStop Color="#b0bcc7" />
+                            <GradientStop Color="#4f6a83" Offset="1" />
+                            <GradientStop Color="#21283E" Offset="0.5"/>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="1" Margin="0 60 0 0">
+                <local:SignUpUserDetailsFragment />
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

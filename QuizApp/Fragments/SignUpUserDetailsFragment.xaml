@@ -1,0 +1,145 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QuizApp"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+             xmlns:Converters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
+             x:Class="QuizApp.SignUpUserDetailsFragment"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1040">
+    <Grid
+		Background="White"
+		Margin="50 30 50 10">
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2.5*"/>
+            </Grid.RowDefinitions>
+            <StackPanel 
+				Orientation="Horizontal">
+                <Grid VerticalAlignment="Center" >
+                    <Border x:Name="imageMask" 
+						Background="White" 
+						CornerRadius="100" 
+						BorderThickness=".1" 
+						Width="50" 
+						Height="50"/>
+                    <StackPanel >
+                        <StackPanel.OpacityMask>
+                            <VisualBrush Visual="{Binding ElementName=imageMask}" />
+                        </StackPanel.OpacityMask>
+                        <Grid Width="70" Height="70" >
+                            <Image HorizontalAlignment="Right" Width="70">
+                                <Image.Source>
+                                    <Binding Path="InstructorImagePath" >
+                                        <Binding.TargetNullValue>
+                                            <ImageSource>../images/avatar.png</ImageSource>
+                                        </Binding.TargetNullValue>
+                                        <Binding.FallbackValue>
+                                            <ImageSource>
+                                                ../images/avatar.png
+                                            </ImageSource>
+                                        </Binding.FallbackValue>
+                                    </Binding>
+                                </Image.Source>
+                            </Image>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+                <Button Content="Update" Margin="10 0"
+                        Style="{StaticResource DefaultButton}"
+                        Height="32"
+                        Width="100"/>
+                <Button Content="Delete" Margin="10 0"
+                        Style="{StaticResource DefaultButton}"
+                        FontWeight="Bold" Height="32"
+                        Background="Red" 
+                        Width="100"/>
+            </StackPanel>
+            <TextBlock Text="Bio" 
+                       Foreground="#2D3F50"
+                       FontSize="25"
+                       FontWeight="Bold"
+                       Margin="5 10 0 0"
+                       Grid.Row="1"/>
+            <Grid Grid.Row="2">
+                <TextBox Style="{StaticResource SignUpTextBoxStyle}"
+                         FontSize="18"
+                         Padding="10 5"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         AcceptsTab="True"
+                         SpellCheck.IsEnabled="True"/>
+                <TextBlock IsHitTestVisible="False" Text="Enter Search Term Here" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Foreground="DarkGray">
+                    <TextBlock.Style>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Text, ElementName=SignUpTextBoxStyle}" Value="">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </Grid>
+            <TextBlock Text="Location" 
+                       Foreground="#2D3F50"
+                       FontSize="25"
+                       FontWeight="Bold"
+                       Margin="5 10 0 0"
+                       Grid.Row="3"/>
+            <Grid Grid.Row="4">
+                <TextBox Style="{StaticResource SignUpTextBoxStyle}"
+                         FontSize="20"
+                         Padding="10 0"
+                         VerticalContentAlignment="Center"/>
+                <TextBlock IsHitTestVisible="False" Text="Enter Search Term Here" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Foreground="DarkGray">
+                    <TextBlock.Style>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Text, ElementName=SignUpTextBoxStyle}" Value="">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </Grid>
+            <TextBlock Text="What brings you to MyAjarn?" 
+                       Foreground="#2D3F50"
+                       FontSize="25"
+                       FontWeight="Bold"
+                       Margin="5 10 0 0"
+                       Grid.Row="5"/>
+            <StackPanel Grid.Row="6">
+                <Button Margin="0 10"
+                        Style="{StaticResource LeftAlignedButtonText}"
+                        Height="32"
+                        x:Name="teacherSingUP"
+                        Click="teacherSingUP_Click">
+                    <TextBlock>
+                    I am here <Bold>to teach</Bold>
+                    </TextBlock>
+                </Button>
+                <Button Margin="0 10 0 0"
+                    Style="{StaticResource LeftAlignedButtonText}"
+                    Height="32"
+                    x:Name="studentSignUp"
+                    Click="studentSignUp_Click">
+                    <TextBlock>
+                    I am here <Bold>to learn</Bold>
+                    </TextBlock>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

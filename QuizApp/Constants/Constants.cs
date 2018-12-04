@@ -4,6 +4,7 @@ using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using QuizApp.DataModels;
 
 namespace QuizApp
 {
@@ -15,6 +16,7 @@ namespace QuizApp
         public static string BASE_URL = "https://edc15afa-0fd5-486a-b546-9fd31202613c.mock.pstmn.io";
         public static int POST_SUCCESS = 1;
         public static int POST_FAIL = 0;
+        public static LoginDataModel LoginData;
 
         public static async Task<T> sendPostRequest<T>(string url, object sendignObject)
         {

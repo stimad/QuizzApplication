@@ -3,4 +3,7 @@
                     xmlns:local="clr-namespace:QuizApp">
     <Color x:Key="ColorPrimary" >#2D3E50</Color>
     <SolidColorBrush x:Key="ColorPrimaryBrush" Color="{StaticResource ColorPrimary}"/>
+
+    <Color x:Key="WindowBorderCoor" >#21283E</Color>
+    <SolidColorBrush x:Key="WindowBorderCoorBrush" Color="{StaticResource WindowBorderCoor}"/>
 </ResourceDictionary>

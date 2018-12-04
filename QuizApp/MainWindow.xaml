@@ -149,11 +149,7 @@
               HorizontalAlignment="Left" 
               Background="#21283E" 
               Panel.ZIndex="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="197*"/>
-                <RowDefinition Height="103*"/>
-            </Grid.RowDefinitions>
-            <StackPanel Grid.RowSpan="2" >
+            <StackPanel >
                 <Grid Height="150" >
                     <Rectangle Height="280" VerticalAlignment="Top">
                         <Rectangle.Fill>
@@ -266,7 +262,7 @@
                     Visibility="Collapsed">
             <local:MessageFragment />
         </Grid>
-        <Grid x:Name="CoursesTab" Margin="60 60 0 0" Visibility="Collapsed">
+        <Grid x:Name="DashboardTab" Margin="60 60 0 0" Visibility="Collapsed">
             <TextBlock Text="Course TODO" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50"/>
         </Grid>
         <Grid x:Name="SettingsTab" Margin="60 60 0 0" Visibility="Collapsed">

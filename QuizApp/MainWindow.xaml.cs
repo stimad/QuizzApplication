@@ -15,6 +15,7 @@ namespace QuizApp
         Grid currentTabView;
         MainWindowVM vm;
         ListViewItem previousSelectedListItem;
+        bool dashboardTabHasChildren = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -24,7 +25,6 @@ namespace QuizApp
             //populateBrowseGrid();
             //populateTopCategories();
             //populateTopInstructorsGrid();
-            serialize();
             previousSelectedListItem = BrowseListItem;
         }
         #region Nav Bar Open/Close Buttons
@@ -87,7 +87,9 @@ namespace QuizApp
                     break;
                 case 2:
                     currentTabView.Visibility = Visibility.Collapsed;
-                    currentTabView = CoursesTab;
+                    currentTabView = DashboardTab;
+                    if(!dashboardTabHasChildren)
+                        DashboardTab.Children.Add(new DashboardFragment());
                     currentTabView.Visibility = Visibility.Visible;
                     break;
                 case 3:
@@ -166,12 +168,6 @@ namespace QuizApp
         //        Grid.SetColumn(cCat, k);
         //    }
         //}
-        void serialize()
-        {
-            string st = JsonConvert.SerializeObject(new DeleteMe());
-            Console.WriteLine(st);
-            DeleteMe n = JsonConvert.DeserializeObject<DeleteMe>(st);
-            Console.WriteLine(n.Name);
-        }
+
     }
 }

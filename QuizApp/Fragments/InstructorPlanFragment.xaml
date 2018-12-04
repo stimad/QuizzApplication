@@ -1,0 +1,256 @@
+﻿<UserControl x:Class="QuizApp.InstructorPlanFragment"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QuizApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1040">
+    <UserControl.Resources>
+        <Style x:Key="TextBlockStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="TextAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="Margin" Value="0 10 0 0" />
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="White"
+          Margin="50 30 50 10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Text="Every instructor/ organization has their special needs. We have different packages to offer , but
+we want to make sure, that you will get a personalized, tailored product. If you don't find what
+you are looking for in the packages below, please contact us!" 
+                       Margin="50 30 50 10"
+                       FontSize="20"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       Foreground="#2D3F50"/>
+            <Button Content="Read More About Licencing" 
+                    Style="{StaticResource DefaultButton}" 
+                    Width="200"/>
+        </StackPanel>
+        <Grid Grid.Row="1"
+              Margin="50 10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Border CornerRadius="20" 
+                        Margin="10">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5, 1" StartPoint="0.5, 0">
+                        <GradientStop Color="#b0bcc7" />
+                        <GradientStop Color="#4f6a83" Offset="0.2" />
+                        <GradientStop Color="#21283E" Offset="0.4"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="INSTRUCTOR"
+                               TextAlignment="Center"
+                               Margin="5 20 5 10"
+                               FontSize="18"
+                               FontWeight="Bold"
+                               Foreground="White"/>
+                        <TextBlock Text="{Binding InstructorPrice, FallbackValue=$149/month}"
+                               TextAlignment="Center"
+                               Foreground="White"
+                               Margin="5"
+                               FontSize="25"
+                               FontWeight="Bold" />
+                        <Border BorderBrush="White"
+                            BorderThickness="0 0 0 1"
+                            Margin="5 0">
+                            <TextBlock Text="1 Instructor" Style="{StaticResource TextBlockStyle}" />
+                        </Border>
+                        <Border BorderBrush="White"
+                            BorderThickness="0 0 0 1"
+                            Margin="5 0">
+                            <TextBlock Text="100 Students/mo" Style="{StaticResource TextBlockStyle}" />
+                        </Border>
+                        <Border BorderBrush="White"
+                            BorderThickness="0 0 0 1"
+                            Margin="5 0">
+                            <TextBlock Text="Unlimited Courses" Style="{StaticResource TextBlockStyle}" />
+                        </Border>
+                        <Border BorderBrush="White"
+                            BorderThickness="0 0 0 1"
+                            Margin="5 0">
+                            <TextBlock Text="Testing &amp; Certifiation" Style="{StaticResource TextBlockStyle}" />
+                        </Border>
+                    </StackPanel>
+                    <Button Content="Start your Free Trial"
+                            Style="{StaticResource WhiteButton}" 
+                            VerticalAlignment="Bottom"
+                            Width="150"
+                            Margin="0 0 0 20"
+                            FontWeight="Bold"/>
+                </Grid>
+            </Border>
+            <Border CornerRadius="20" 
+                        Margin="10"
+                        Grid.Column="1">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5, 1" StartPoint="0.5, 0">
+                        <GradientStop Color="#b0bcc7" />
+                        <GradientStop Color="#4f6a83" Offset="0.2" />
+                        <GradientStop Color="#21283E" Offset="0.4"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="TRAINING CENTER"
+                               TextAlignment="Center"
+                               Margin="5 20 5 10"
+                               FontSize="18"
+                               FontWeight="Bold"
+                               Foreground="White"/>
+                        <TextBlock Text="{Binding TrainingCenterCost, FallbackValue=$299/month}"
+                               TextAlignment="Center"
+                               Foreground="White"
+                               Margin="5"
+                               FontSize="25"
+                               FontWeight="Bold" />
+                        <Border BorderBrush="White"
+                            BorderThickness="0 0 0 1"
+                            Margin="5 0">
+                            <TextBlock Text="5 Instructors" Style="{StaticResource TextBlockStyle}" />
+                        </Border>
+                        <Border BorderBrush="White"
+                            BorderThickness="0 0 0 1"
+                            Margin="5 0">
+                            <TextBlock Text="500 Students/mo" Style="{StaticResource TextBlockStyle}" />
+                        </Border>
+                        <Border BorderBrush="White"
+                            BorderThickness="0 0 0 1"
+                            Margin="5 0">
+                            <TextBlock Text="Unlimited Courses" Style="{StaticResource TextBlockStyle}" />
+                        </Border>
+                        <Border BorderBrush="White"
+                            BorderThickness="0 0 0 1"
+                            Margin="5 0">
+                            <TextBlock Text="Testing &amp; Certifiation" Style="{StaticResource TextBlockStyle}" />
+                        </Border>
+                        <Border BorderBrush="White"
+                            BorderThickness="0 0 0 1"
+                            Margin="5 0">
+                            <TextBlock Text="Custom Branding" Style="{StaticResource TextBlockStyle}" />
+                        </Border>
+                    </StackPanel>
+                    <Button Content="Start your Free Trial"
+                            Style="{StaticResource WhiteButton}" 
+                            VerticalAlignment="Bottom"
+                            Width="150"
+                            Margin="0 0 0 20"
+                            FontWeight="Bold"/>
+                </Grid>
+            </Border>
+            <Border CornerRadius="20" 
+                        Margin="10"
+                        Grid.Column="2">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5, 1" StartPoint="0.5, 0">
+                        <GradientStop Color="#b0bcc7" />
+                        <GradientStop Color="#4f6a83" Offset="0.2" />
+                        <GradientStop Color="#21283E" Offset="0.4"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="BUSINESS"
+                               TextAlignment="Center"
+                               Margin="5 20 5 10"
+                               FontSize="18"
+                               FontWeight="Bold"
+                               Foreground="White"/>
+                        <TextBlock Text="{Binding BusinessCost, FallbackValue=$599/month}"
+                               TextAlignment="Center"
+                               Foreground="White"
+                               Margin="5"
+                               FontSize="25"
+                               FontWeight="Bold" />
+                        <Border BorderBrush="White"
+                            BorderThickness="0 0 0 1"
+                            Margin="5 0">
+                            <TextBlock Text="10 Instructors" Style="{StaticResource TextBlockStyle}" />
+                        </Border>
+                        <Border BorderBrush="White"
+                            BorderThickness="0 0 0 1"
+                            Margin="5 0">
+                            <TextBlock Text="1000 Students/mo" Style="{StaticResource TextBlockStyle}" />
+                        </Border>
+                        <Border BorderBrush="White"
+                            BorderThickness="0 0 0 1"
+                            Margin="5 0">
+                            <TextBlock Text="Unlimited Courses" Style="{StaticResource TextBlockStyle}" />
+                        </Border>
+                        <Border BorderBrush="White"
+                            BorderThickness="0 0 0 1"
+                            Margin="5 0">
+                            <TextBlock Text="Testing &amp; Certifiation" Style="{StaticResource TextBlockStyle}" />
+                        </Border>
+                        <Border BorderBrush="White"
+                            BorderThickness="0 0 0 1"
+                            Margin="5 0">
+                            <TextBlock Text="Custom Branding" Style="{StaticResource TextBlockStyle}" />
+                        </Border>
+                    </StackPanel>
+                    <Button Content="Start your Free Trial"
+                            Style="{StaticResource WhiteButton}" 
+                            VerticalAlignment="Bottom"
+                            Width="150"
+                            Margin="0 0 0 20"
+                            FontWeight="Bold"/>
+                </Grid>
+            </Border>
+            <Border CornerRadius="20" 
+                        Margin="10"
+                        Grid.Column="3">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5, 1" StartPoint="0.5, 0">
+                        <GradientStop Color="#b0bcc7" />
+                        <GradientStop Color="#4f6a83" Offset="0.2" />
+                        <GradientStop Color="#21283E" Offset="0.4"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="ENTERPRISE"
+                               TextAlignment="Center"
+                               Margin="5 20 5 10"
+                               FontSize="18"
+                               FontWeight="Bold"
+                               Foreground="White"/>
+                        <TextBlock Text="{Binding InstructorPrice, FallbackValue=Contact us}"
+                               TextAlignment="Center"
+                               Foreground="White"
+                               Margin="5"
+                               FontSize="25"
+                               FontWeight="Bold" />
+
+                        <TextBlock Text="Need over 1000" Style="{StaticResource TextBlockStyle}" />
+                        <TextBlock Text="Students and all the" Style="{StaticResource TextBlockStyle}" />
+                        <TextBlock Text="Features in our" Style="{StaticResource TextBlockStyle}" />
+                        <TextBlock Text="Business package?" Style="{StaticResource TextBlockStyle}" />
+                    </StackPanel>
+                    <Button 
+                            Style="{StaticResource WhiteButton}" 
+                            VerticalAlignment="Bottom"
+                            Width="150"
+                            Margin="20,0,20,20" >
+                        <TextBlock Text="Request your custom plan"
+                                   TextWrapping="Wrap"
+                                   TextAlignment="Center"
+                                   FontWeight="Bold"/>
+                    </Button>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>
