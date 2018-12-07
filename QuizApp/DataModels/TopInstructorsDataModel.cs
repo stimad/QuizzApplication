@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace QuizApp
 {
     class TopInstructorsDataModel
     {
-        public List<InstructorCardVM> TopInstructors { get; set; }
+        public ObservableCollection<InstructorCardVM> TopInstructors { get; set; }
     }
 }

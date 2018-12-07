@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="QuizApp.PopularCoursesListItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QuizApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="300">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="8*" />
+        </Grid.ColumnDefinitions>
+        <Image Source="{Binding ImagePath, FallbackValue={StaticResource DefaultImage}}"
+               VerticalAlignment="Stretch"
+               HorizontalAlignment="Left"
+               Width="60"
+               Height="60"/>
+        <StackPanel Grid.Column="1">
+            <TextBlock Text="{Binding CourseName, FallbackValue=Course Title}"
+                       Foreground="Gray"
+                       FontSize="16"
+                       Margin="5"
+                       TextWrapping="Wrap"/>
+            <TextBlock Text="{Binding CoursePrice, FallbackValue=Free}"
+                       Foreground="Gray"
+                       FontSize="13"
+                       Margin="5"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

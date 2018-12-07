@@ -10,7 +10,7 @@
         <Style x:Key="TextBlockStyle" TargetType="{x:Type TextBlock}">
             <Setter Property="Foreground" Value="White" />
             <Setter Property="TextAlignment" Value="Center" />
-            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontSize" Value="15" />
             <Setter Property="Margin" Value="0 10 0 0" />
         </Style>
     </UserControl.Resources>
@@ -120,7 +120,8 @@ you are looking for in the packages below, please contact us!"
                         <Border BorderBrush="White"
                             BorderThickness="0 0 0 1"
                             Margin="5 0">
-                            <TextBlock Text="5 Instructors" Style="{StaticResource TextBlockStyle}" />
+                            <TextBlock Text="5 Instructors" 
+                                       Style="{StaticResource TextBlockStyle}" />
                         </Border>
                         <Border BorderBrush="White"
                             BorderThickness="0 0 0 1"

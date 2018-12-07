@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.ObjectModel;
 
-namespace QuizApp.DataModels
+namespace QuizApp
 {
     public class CourseCategoriesDataModel
     {
-        public List<CourseCategoryVM> TopCategories { get; set; }
+        public ObservableCollection<CourseCategoryVM> TopCategories { get; set; }
     }
 }

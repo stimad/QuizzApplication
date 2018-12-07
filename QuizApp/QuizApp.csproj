@@ -85,6 +85,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Constants\Constants.cs" />
+    <Compile Include="CustomControls\BaseCustomControl\BaseCustomControl.xaml.cs">
+      <DependentUpon>BaseCustomControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\ChatListItem.xaml.cs">
       <DependentUpon>ChatListItem.xaml</DependentUpon>
     </Compile>
@@ -103,6 +106,9 @@
     <Compile Include="CustomControls\DashboardCoursesItem.xaml.cs">
       <DependentUpon>DashboardCoursesItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\PopularCoursesListItem.xaml.cs">
+      <DependentUpon>PopularCoursesListItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\UserPerformance.xaml.cs">
       <DependentUpon>UserPerformance.xaml</DependentUpon>
     </Compile>
@@ -112,6 +118,9 @@
     <Compile Include="DataModels\CourseCardDataModel.cs" />
     <Compile Include="DataModels\CourseCardsDataModel.cs" />
     <Compile Include="DataModels\CourseCategoriesDataModel.cs" />
+    <Compile Include="DataModels\CourseContentDataModel.cs" />
+    <Compile Include="DataModels\CourseLessonsDataModel.cs" />
+    <Compile Include="DataModels\CourseListItem.cs" />
     <Compile Include="DataModels\LoginDataModel.cs" />
     <Compile Include="DataModels\Message.cs" />
     <Compile Include="DataModels\ResponseDataModel.cs" />
@@ -123,6 +132,15 @@
     </Compile>
     <Compile Include="CustomControls\CourseCategory.xaml.cs">
       <DependentUpon>CourseCategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\BrowseOverviewFragment.xaml.cs">
+      <DependentUpon>BrowseOverviewFragment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\CourseCardsContainer.xaml.cs">
+      <DependentUpon>CourseCardsContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\CourseExpanded.xaml.cs">
+      <DependentUpon>CourseExpanded.xaml</DependentUpon>
     </Compile>
     <Compile Include="Fragments\CoursesFragment.xaml.cs">
       <DependentUpon>CoursesFragment.xaml</DependentUpon>
@@ -150,8 +168,12 @@
     </Compile>
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\BrowseFragmentVM.cs" />
+    <Compile Include="ViewModels\BrowseOverviewVM.cs" />
+    <Compile Include="ViewModels\Commands\ActionCommand.cs" />
     <Compile Include="ViewModels\CourseCardVM.cs" />
     <Compile Include="ViewModels\CourseCategoryVM.cs" />
+    <Compile Include="ViewModels\CourseCardsContainerVM.cs" />
+    <Compile Include="ViewModels\CourseExpandedVM.cs" />
     <Compile Include="ViewModels\CummunityActivityItemVM.cs" />
     <Compile Include="ViewModels\DashboardCoursesItemVM.cs" />
     <Compile Include="ViewModels\DashboardFragmentVM.cs" />
@@ -161,6 +183,11 @@
     <Compile Include="ViewModels\MessageFragmentVM.cs" />
     <Compile Include="ViewModels\SecondSignUpVM.cs" />
     <Compile Include="ViewModels\UserPerformanceListItemVM.cs" />
+    <Compile Include="ViewModels\VotingStarsVM.cs" />
+    <Page Include="CustomControls\BaseCustomControl\BaseCustomControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CustomControls\ChatListItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -185,6 +212,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CustomControls\PopularCoursesListItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CustomControls\UserPerformance.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -198,6 +229,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CustomControls\CourseCategory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fragments\BrowseOverviewFragment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fragments\CourseCardsContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fragments\CourseExpanded.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -284,6 +327,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles\Image.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\NavigationDataTemplates.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

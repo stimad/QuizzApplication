@@ -2,7 +2,6 @@
 {
     public class CourseCardVM : BaseViewModel
     {
-        public static CourseCardVM Instance { get { return new CourseCardVM(); } }
         public string CoursePrice { get; set; } = "";
         public string CourseName { get; set; }
         public string CourseLecturer { get; set; }

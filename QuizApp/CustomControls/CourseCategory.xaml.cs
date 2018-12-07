@@ -7,10 +7,9 @@ namespace QuizApp
     /// </summary>
     public partial class CourseCategory : UserControl
     {
-        public CourseCategory(CourseCategoryVM vm)
+        public CourseCategory()
         {
             InitializeComponent();
-            DataContext = vm;
         }
     }
 }

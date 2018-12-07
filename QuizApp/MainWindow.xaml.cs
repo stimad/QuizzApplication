@@ -22,9 +22,6 @@ namespace QuizApp
             currentTabView = HomeTab;
             vm = new MainWindowVM(440);
             this.DataContext = vm;
-            //populateBrowseGrid();
-            //populateTopCategories();
-            //populateTopInstructorsGrid();
             previousSelectedListItem = BrowseListItem;
         }
         #region Nav Bar Open/Close Buttons

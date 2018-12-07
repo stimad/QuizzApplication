@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace QuizApp.CustomControls
+namespace QuizApp
 {
     /// <summary>
     /// Interaction logic for VotingStars.xaml
@@ -11,12 +11,12 @@ namespace QuizApp.CustomControls
     public partial class VotingStars : UserControl
     {
         float numOfFullStars;
-        public float MarkProp
+        public int MarkProp
         {
-            get { return (float)GetValue(MarkProperty); }
+            get { return (int)GetValue(MarkProperty); }
             set
             {
-                //setMarks(value);
+                setMarks(value);
                 SetValue(MarkProperty, numOfFullStars);
             }
         }

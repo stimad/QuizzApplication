@@ -5,6 +5,8 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using QuizApp.DataModels;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace QuizApp
 {
@@ -17,6 +19,7 @@ namespace QuizApp
         public static int POST_SUCCESS = 1;
         public static int POST_FAIL = 0;
         public static LoginDataModel LoginData;
+        public static ObservableCollection<string> CourseCategories = new ObservableCollection<string>{ "All Categories", "Business", "Design", "Programming", "Photography", "Language", "Lifestyle", "IT & Software" };
 
         public static async Task<T> sendPostRequest<T>(string url, object sendignObject)
         {
@@ -31,7 +34,7 @@ namespace QuizApp
                     return loginData;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
                 return (T)Activator.CreateInstance(typeof(T));

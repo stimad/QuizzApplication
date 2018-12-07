@@ -3,11 +3,11 @@
 namespace QuizApp
 {
     /// <summary>
-    /// Interaction logic for InstructorCard.xaml
+    /// Interaction logic for PopularCoursesListItem.xaml
     /// </summary>
-    public partial class InstructorCard : UserControl
+    public partial class PopularCoursesListItem : UserControl
     {
-        public InstructorCard()
+        public PopularCoursesListItem()
         {
             InitializeComponent();
         }
