@@ -1,18 +1,25 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Input;
 
 namespace QuizApp
 {
-    public class CourseCardsContainerVM: BaseViewModel
+    public class CategoriesCardContainerVM: BaseViewModel
     {
+
         public Visibility ContentVisibility { get; set; } = Visibility.Visible;
         public BaseViewModel ViewModel { get; set; } = null;
-        public BaseViewModel InnerViewModel { get; set; }
         public ObservableCollection<CourseCardVM> DesirableCourses { get; set; }
         public ObservableCollection<CourseCategoryVM> CourseCategories { get; set; }
         public ObservableCollection<CourseCardVM> PopularCourses { get; set; }
+        public ObservableCollection<CategoriesCardVM> Categories { get; set; }
 
+        public CategoriesCardContainerVM()
+        {
+            populateAllCourses();
+            populateCourseCategories();
+            populatePopularCourses();
+            populateCtegories();
+        }
         public void populateAllCourses()
         {
             ObservableCollection<CourseCardVM> courses = new ObservableCollection<CourseCardVM>();
@@ -156,6 +163,73 @@ namespace QuizApp
                     ImagePath = "../images/courseImage.jpg",
                     CourseName = "C# For Beginners",
                     CoursePrice = "$324"
+                }
+            };
+        }
+
+        public void populateCtegories()
+        {
+            Categories = new ObservableCollection<CategoriesCardVM>()
+            {
+                new CategoriesCardVM()
+                {
+                    CategoryName = "User Experience/UX Design",
+                    CategoryDescription = "Workshop For UX Design",
+                    ImagePath = "../images/courseImage.jpg"
+                },
+                new CategoriesCardVM()
+                {
+                    CategoryName = "User Experience/UX Design",
+                    CategoryDescription = "Workshop For UX Design",
+                    ImagePath = "../images/courseImage.jpg"
+                },
+                new CategoriesCardVM()
+                {
+                    CategoryName = "User Experience/UX Design",
+                    CategoryDescription = "Workshop For UX Design",
+                    ImagePath = "../images/courseImage.jpg"
+                },
+                new CategoriesCardVM()
+                {
+                    CategoryName = "User Experience/UX Design",
+                    CategoryDescription = "Workshop For UX Design",
+                    ImagePath = "../images/courseImage.jpg"
+                },
+                new CategoriesCardVM()
+                {
+                    CategoryName = "User Experience/UX Design",
+                    CategoryDescription = "Workshop For UX Design",
+                    ImagePath = "../images/courseImage.jpg"
+                },
+                new CategoriesCardVM()
+                {
+                    CategoryName = "User Experience/UX Design",
+                    CategoryDescription = "Workshop For UX Design",
+                    ImagePath = "../images/courseImage.jpg"
+                },
+                new CategoriesCardVM()
+                {
+                    CategoryName = "User Experience/UX Design",
+                    CategoryDescription = "Workshop For UX Design",
+                    ImagePath = "../images/courseImage.jpg"
+                },
+                new CategoriesCardVM()
+                {
+                    CategoryName = "User Experience/UX Design",
+                    CategoryDescription = "Workshop For UX Design",
+                    ImagePath = "../images/courseImage.jpg"
+                },
+                new CategoriesCardVM()
+                {
+                    CategoryName = "User Experience/UX Design",
+                    CategoryDescription = "Workshop For UX Design",
+                    ImagePath = "../images/courseImage.jpg"
+                },
+                new CategoriesCardVM()
+                {
+                    CategoryName = "User Experience/UX Design",
+                    CategoryDescription = "Workshop For UX Design",
+                    ImagePath = "../images/courseImage.jpg"
                 }
             };
         }

@@ -13,4 +13,14 @@
     <DataTemplate DataType="{x:Type local:CourseExpandedVM}">
         <local:CourseExpanded />
     </DataTemplate>
+    <DataTemplate DataType="{x:Type local:CourseCardGridVM}">
+        <local:CourseCardsGridFragment x:Name="grid"/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type local:CategoriesCardContainerVM}">
+        <local:CategoriesCardContainer />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type local:InstructorsCardContainerVM}">
+        <local:InstructorsCardContainer />
+    </DataTemplate>
+    
 </ResourceDictionary>

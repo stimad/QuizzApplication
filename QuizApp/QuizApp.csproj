@@ -88,6 +88,9 @@
     <Compile Include="CustomControls\BaseCustomControl\BaseCustomControl.xaml.cs">
       <DependentUpon>BaseCustomControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\CategoriesCard.xaml.cs">
+      <DependentUpon>CategoriesCard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\ChatListItem.xaml.cs">
       <DependentUpon>ChatListItem.xaml</DependentUpon>
     </Compile>
@@ -136,8 +139,14 @@
     <Compile Include="Fragments\BrowseOverviewFragment.xaml.cs">
       <DependentUpon>BrowseOverviewFragment.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Fragments\CategoriesCardContainer.xaml.cs">
+      <DependentUpon>CategoriesCardContainer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Fragments\CourseCardsContainer.xaml.cs">
       <DependentUpon>CourseCardsContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\CourseCardsGridFragment.xaml.cs">
+      <DependentUpon>CourseCardsGridFragment.xaml</DependentUpon>
     </Compile>
     <Compile Include="Fragments\CourseExpanded.xaml.cs">
       <DependentUpon>CourseExpanded.xaml</DependentUpon>
@@ -154,8 +163,14 @@
     <Compile Include="CustomControls\InstructorCard.xaml.cs">
       <DependentUpon>InstructorCard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Fragments\InstructorExpandedFragment.xaml.cs">
+      <DependentUpon>InstructorExpandedFragment.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Fragments\InstructorPlanFragment.xaml.cs">
       <DependentUpon>InstructorPlanFragment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\InstructorsCardContainer.xaml.cs">
+      <DependentUpon>InstructorsCardContainer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Fragments\MessageFragment.xaml.cs">
       <DependentUpon>MessageFragment.xaml</DependentUpon>
@@ -169,7 +184,11 @@
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\BrowseFragmentVM.cs" />
     <Compile Include="ViewModels\BrowseOverviewVM.cs" />
+    <Compile Include="ViewModels\CategoriesCardContainerVM.cs" />
+    <Compile Include="ViewModels\CategoriesCardGridVM.cs" />
+    <Compile Include="ViewModels\CategoriesCardVM.cs" />
     <Compile Include="ViewModels\Commands\ActionCommand.cs" />
+    <Compile Include="ViewModels\CourseCardGridVM.cs" />
     <Compile Include="ViewModels\CourseCardVM.cs" />
     <Compile Include="ViewModels\CourseCategoryVM.cs" />
     <Compile Include="ViewModels\CourseCardsContainerVM.cs" />
@@ -178,13 +197,19 @@
     <Compile Include="ViewModels\DashboardCoursesItemVM.cs" />
     <Compile Include="ViewModels\DashboardFragmentVM.cs" />
     <Compile Include="ViewModels\InstructorCardVM.cs" />
+    <Compile Include="ViewModels\InstructorExpandedFragmentVM.cs" />
     <Compile Include="ViewModels\InstructorPlanFragmentVM.cs" />
+    <Compile Include="ViewModels\InstructorsCardContainerVM.cs" />
     <Compile Include="ViewModels\MainWindowVM.cs" />
     <Compile Include="ViewModels\MessageFragmentVM.cs" />
     <Compile Include="ViewModels\SecondSignUpVM.cs" />
     <Compile Include="ViewModels\UserPerformanceListItemVM.cs" />
     <Compile Include="ViewModels\VotingStarsVM.cs" />
     <Page Include="CustomControls\BaseCustomControl\BaseCustomControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\CategoriesCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -236,7 +261,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Fragments\CategoriesCardContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Fragments\CourseCardsContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fragments\CourseCardsGridFragment.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -260,7 +293,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Fragments\InstructorExpandedFragment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Fragments\InstructorPlanFragment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fragments\InstructorsCardContainer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

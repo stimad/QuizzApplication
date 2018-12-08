@@ -23,6 +23,10 @@ namespace QuizApp
         public string VideoDuration { get; set; }
         public string Certificate { get; set; }
 
+        public CourseExpandedVM()
+        {
+            populateModel();
+        }
         private void populateModel()
         {
             CourseTitle = "C# For Beginners";

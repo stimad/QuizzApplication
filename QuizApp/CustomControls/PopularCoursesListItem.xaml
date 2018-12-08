@@ -14,17 +14,17 @@
         <Image Source="{Binding ImagePath, FallbackValue={StaticResource DefaultImage}}"
                VerticalAlignment="Stretch"
                HorizontalAlignment="Left"
-               Width="60"
-               Height="60"/>
+               Width="50"
+               Height="50"/>
         <StackPanel Grid.Column="1">
             <TextBlock Text="{Binding CourseName, FallbackValue=Course Title}"
                        Foreground="Gray"
-                       FontSize="16"
+                       FontSize="14"
                        Margin="5"
                        TextWrapping="Wrap"/>
             <TextBlock Text="{Binding CoursePrice, FallbackValue=Free}"
                        Foreground="Gray"
-                       FontSize="13"
+                       FontSize="14"
                        Margin="5"/>
         </StackPanel>
     </Grid>

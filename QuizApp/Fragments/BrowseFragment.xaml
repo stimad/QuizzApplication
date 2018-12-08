@@ -32,16 +32,16 @@
                     </Grid.ColumnDefinitions>
                     <Button Content="Overview" Margin="5 2" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#2D3F50"
                                 Uid="0" VerticalAlignment="Top" x:Name="overviewTabButton" Click="tabButton_Clicked"
-                                HorizontalContentAlignment="Left"  Padding="0"/>
+                                HorizontalContentAlignment="Left"  Padding="0" Command="{Binding SetBrowseOverviewFragment}"/>
                     <Button Grid.Column="1" Content="Courses" Margin="5 2" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Gray"
                                 Uid="1" VerticalAlignment="Top" x:Name="coursesTabButton" Command="{Binding SetCoursesContainerFragment}"
                                 HorizontalContentAlignment="Left" Padding="0" Click="tabButton_Clicked"/>
                     <Button Grid.Column="2" Content="Faculties" Margin="5" Background="{x:Null}" Click="tabButton_Clicked"
                                 BorderBrush="{x:Null}" Foreground="Gray" Uid="2" x:Name="facultiesTabButton" 
-                                 HorizontalContentAlignment="Left" Padding="0"/>
+                                 HorizontalContentAlignment="Left" Padding="0" Command="{Binding SetCategoriesFragment}"/>
                     <Button Grid.Column="3" Content="Instructors" Margin="5" Background="{x:Null}" Click="tabButton_Clicked"
                                 BorderBrush="{x:Null}" Foreground="Gray" Uid="3" x:Name="instructorsTabButton"
-                                HorizontalContentAlignment="Left" Padding="0"/>
+                                HorizontalContentAlignment="Left" Padding="0" Command="{Binding SetInstructorsFragment}"/>
                     <Button Grid.Column="4" Content="Schools" Margin="5" Background="{x:Null}" Click="tabButton_Clicked"
                                 BorderBrush="{x:Null}" Foreground="Gray" Uid="4" x:Name="schoolsTabButton"
                                 HorizontalContentAlignment="Left" Padding="0"/>

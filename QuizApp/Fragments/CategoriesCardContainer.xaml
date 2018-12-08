@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="QuizApp.CourseCardsContainer"
+﻿<UserControl x:Class="QuizApp.CategoriesCardContainer"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:QuizApp"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="900" d:DesignWidth="1040" Loaded="UserControl_Loaded">
+             d:DesignHeight="900" d:DesignWidth="1040">
     <Grid>
         <Grid>
             <ContentControl Content="{Binding ViewModel}"/>
@@ -65,10 +65,29 @@
             Grid.Row="1"
             Grid.Column="0"
             VerticalScrollBarVisibility="Auto">
-                <Grid Border.MouseDown="Grid_MouseDown" x:Name="MyGrid">
-                    <!--<ContentControl Content="{Binding InnerViewModel}"
-                                    x:Name="InnerFragments"
-                                    />-->
+                <Grid  x:Name="MyGrid">
+                    <ItemsControl ItemsSource="{Binding Categories}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid Columns="3" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBlock Text="BRavo" />
+                                    <Button
+                                        Padding="5"
+                                        Style="{StaticResource CourseCardButton}"
+                                        x:Name="Butt">
+                                        <WrapPanel>
+                                            <local:CategoriesCard />
+                                        </WrapPanel>
+                                    </Button>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </Grid>
             </ScrollViewer>
             <ScrollViewer
