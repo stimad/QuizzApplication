@@ -9,7 +9,7 @@
              d:DesignHeight="900" d:DesignWidth="1040">
     <UserControl.Resources>
         <Style x:Key="TextBlockStyle1" TargetType="{x:Type TextBlock}">
-            <Setter Property="Foreground" Value="LightGray" />
+            <Setter Property="Foreground" Value="Gray" />
             <Setter Property="FontSize" Value="10" />
         </Style>
         <Style x:Key="TextBlockStyle2" TargetType="{x:Type TextBlock}">
@@ -18,126 +18,128 @@
             <Setter Property="FontWeight" Value="Bold" />
         </Style>
     </UserControl.Resources>
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="60" />
-            <RowDefinition Height="300" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <StackPanel 
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="300" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackPanel 
                        VerticalAlignment="Center">
-            <TextBlock Text="{Binding InstructorName, FallbackValue=Ben}"
+                <TextBlock Text="{Binding InstructorName, FallbackValue=Ben}"
                        Foreground="{StaticResource WindowBorderCoorBrush}"
                        FontSize="30"
                        Margin="10 0"
                        FontWeight="Bold"/>
-        </StackPanel>
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="300" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <StackPanel VerticalAlignment="Center">
-                <Image Source="{Binding ImagePath, FallbackValue={StaticResource DefaultImage}}"
+            </StackPanel>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel VerticalAlignment="Center">
+                    <Image Source="{Binding ImagePath, FallbackValue={StaticResource DefaultImage}}"
                        Height="200"
                        Width="200" />
-                <StackPanel>
-                    <Grid
+                    <StackPanel>
+                        <Grid
                     Margin="100 20">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <materialDesign:PackIcon Kind="Twitter" 
-                                                 Foreground="LightGray" 
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <materialDesign:PackIcon Kind="Twitter" 
+                                                 Foreground="Gray" 
                                                  VerticalAlignment="Center"
                                                  HorizontalAlignment="Center"/>
-                        <materialDesign:PackIcon Kind="Facebook" 
-                                                 Foreground="LightGray" 
+                            <materialDesign:PackIcon Kind="Facebook" 
+                                                 Foreground="Gray" 
                                                  VerticalAlignment="Center"
                                                  HorizontalAlignment="Center"
                                                  Grid.Column="1"/>
-                        <materialDesign:PackIcon Kind="Pinterest" 
-                                                 Foreground="LightGray" 
+                            <materialDesign:PackIcon Kind="Pinterest" 
+                                                 Foreground="Gray" 
                                                  VerticalAlignment="Center"
                                                  HorizontalAlignment="Center"
                                                  Grid.Column="2"/>
-                        <materialDesign:PackIcon Kind="Linkedin" 
-                                                 Foreground="LightGray" 
+                            <materialDesign:PackIcon Kind="Linkedin" 
+                                                 Foreground="Gray" 
                                                  VerticalAlignment="Center"
                                                  HorizontalAlignment="Center"
                                                  Grid.Column="3"/>
-                    </Grid>
-                </StackPanel>
-            </StackPanel>
-            <StackPanel Grid.Column="1"
-                        Margin="40 20">
-                <StackPanel Orientation="Horizontal">
-                    <StackPanel Margin="0 0 50 0">
-                        <TextBlock Text="Students" 
-                                   Style="{StaticResource TextBlockStyle1}"/>
-                        <TextBlock Text="{Binding NumberOfStudents, FallbackValue=56 000}" 
-                                   Style="{StaticResource TextBlockStyle2}"/>
+                        </Grid>
                     </StackPanel>
-                    <StackPanel Margin="0 0 50 0">
-                        <StackPanel>
-                            <TextBlock Text="Courses" 
+                </StackPanel>
+                <StackPanel Grid.Column="1"
+                        Margin="40 20">
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Margin="0 0 50 0">
+                            <TextBlock Text="Students" 
                                    Style="{StaticResource TextBlockStyle1}"/>
-                            <TextBlock Text="{Binding NumberOfCourses, FallbackValue=36}" 
+                            <TextBlock Text="{Binding NumberOfStudents, FallbackValue=56 000}" 
                                    Style="{StaticResource TextBlockStyle2}"/>
+                        </StackPanel>
+                        <StackPanel Margin="0 0 50 0">
+                            <StackPanel>
+                                <TextBlock Text="Courses" 
+                                   Style="{StaticResource TextBlockStyle1}"/>
+                                <TextBlock Text="{Binding NumberOfCourses, FallbackValue=36}" 
+                                   Style="{StaticResource TextBlockStyle2}"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel>
+                            <StackPanel>
+                                <TextBlock Text="Reviews" 
+                                   Style="{StaticResource TextBlockStyle1}"/>
+                                <TextBlock Text="{Binding NumberOfReviews, FallbackValue=9 365}" 
+                                   Style="{StaticResource TextBlockStyle2}"/>
+                            </StackPanel>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel>
-                        <StackPanel>
-                            <TextBlock Text="Reviews" 
-                                   Style="{StaticResource TextBlockStyle1}"/>
-                            <TextBlock Text="{Binding NumberOfCourses, FallbackValue=9 365}" 
-                                   Style="{StaticResource TextBlockStyle2}"/>
-                        </StackPanel>
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel>
-                    <TextBlock TextWrapping="Wrap"
+                        <TextBlock TextWrapping="Wrap"
                                Foreground="{StaticResource WindowBorderCoorBrush}"
                                FontSize="13"
                                Margin="0 30 0 0"
                                FontWeight="Bold"
                                Text="{Binding InstrucorHabits, FallbackValue=The first thing he wanted to do was...}" />
-                    <TextBlock TextWrapping="Wrap"
-                               Foreground="LightGray"
+                        <TextBlock TextWrapping="Wrap"
+                               Foreground="Gray"
                                FontSize="13"
                                Margin="0 30 0 0"
                                Text="{Binding InstrucorDescription, FallbackValue=The first thing he wanted to do was...}" />
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
-        </Grid>
-        <StackPanel Grid.Row="2" >
-            <TextBlock FontSize="17"
+            </Grid>
+            <StackPanel Grid.Row="2" >
+                <TextBlock FontSize="17"
                        HorizontalAlignment="Center"
                        Margin="0 0 0 20"
                        Foreground="{StaticResource WindowBorderCoorBrush}"
                        Text="{Binding CourseListHeader, FallbackValue=Course taught by John Doe}" />
-            <ItemsControl ItemsSource="{Binding Instructors}">
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <UniformGrid Columns="3" />
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Button
+                <ItemsControl ItemsSource="{Binding Courses}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="4" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button
                             Padding="5"
                             Style="{StaticResource CourseCardButton}"
                             x:Name="Butt">
-                            <WrapPanel>
-                                <local:CourseCardUC />
-                            </WrapPanel>
-                        </Button>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-        </StackPanel>
-    </Grid>
+                                <WrapPanel>
+                                    <local:CourseCardUC />
+                                </WrapPanel>
+                            </Button>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
 </UserControl>

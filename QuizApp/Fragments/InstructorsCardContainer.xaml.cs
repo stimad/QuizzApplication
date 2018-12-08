@@ -7,10 +7,18 @@ namespace QuizApp
     /// </summary>
     public partial class InstructorsCardContainer : UserControl
     {
+        InstructorsCardContainerVM vm;
         public InstructorsCardContainer()
         {
             InitializeComponent();
-            DataContext = new InstructorsCardContainerVM();
+            vm = new InstructorsCardContainerVM();
+            DataContext = vm;
+        }
+
+        private void Butt_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            vm.ContentVisibility = System.Windows.Visibility.Collapsed;
+            vm.ViewModel = new InstructorExpandedFragmentVM();
         }
     }
 }

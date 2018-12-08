@@ -7,7 +7,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              xmlns:CustomControl="clr-namespace:QuizApp"
-             d:DesignHeight="500" d:DesignWidth="300">
+             d:DesignHeight="500" d:DesignWidth="250">
     <UserControl.Template>
         <ControlTemplate>
 
@@ -64,34 +64,47 @@
                         <Border BorderBrush="Gray" 
                         BorderThickness="0 1 0 1">
                             <Grid>
-                                <StackPanel Orientation="Horizontal"
-                                Margin="5"
-                                Height="40">
-                                    <materialDesign:PackIcon Kind="People"
+                                <Grid
+                                    Margin="5"
+                                    Height="40">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="4*" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="People"
                                                  Foreground="Gray"
                                                  VerticalAlignment="Center"
                                                  Width="20"
-                                                 Height="20"/>
-                                    <TextBlock Text="{Binding NumberOfComments, FallbackValue=6}" 
-                                   Foreground="Gray" 
-                                   Margin="5 0"
-                                   VerticalAlignment="Center"
-                                   FontSize="15"/>
-                                    <materialDesign:PackIcon Kind="MessageGroup"
+                                                 Height="20"
+                                                 Grid.Column="0"/>
+                                        <TextBlock Text="{Binding NumberOfComments, FallbackValue=6}" 
+                                       Foreground="Gray" 
+                                       Margin="5 0"
+                                       VerticalAlignment="Center"
+                                       FontSize="15"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal"
+                                       Grid.Column="1">
+                                        <materialDesign:PackIcon Kind="MessageGroup"
                                                  Foreground="Gray"
                                                  VerticalAlignment="Center"
                                                  Width="20"
                                                  Height="20"
                                                  Margin="10 0 0 0"/>
-                                    <TextBlock Text="{Binding NumberOfAttenders, FallbackValue=2}" 
-                                   Foreground="Gray" 
-                                   Margin="5 0"
-                                   VerticalAlignment="Center"
-                                   FontSize="15"/>
-                                </StackPanel>
-                                <ContentPresenter HorizontalAlignment="Right"
-                                                  VerticalAlignment="Center"
-                                                  Margin="10"/>
+                                        <TextBlock Text="{Binding NumberOfAttenders, FallbackValue=2}" 
+                                       Foreground="Gray" 
+                                       Margin="5 0"
+                                       VerticalAlignment="Center"
+                                       FontSize="15"/>
+                                    </StackPanel>
+                                    <local:VotingStars
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Right"
+                                        Margin="0 0 5 0"
+                                        Grid.Column="2"/>
+                                </Grid>
                             </Grid>
                         </Border>
                     </StackPanel>

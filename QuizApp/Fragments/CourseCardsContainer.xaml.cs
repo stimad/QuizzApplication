@@ -204,10 +204,5 @@ namespace QuizApp
             vm.ViewModel = new CourseExpandedVM();
             vm.ContentVisibility = Visibility.Collapsed;
         }
-        private void SetExpandedCategory(object sender, EventArgs e)
-        {
-            vm.ViewModel = new CourseExpandedVM();
-            vm.ContentVisibility = Visibility.Collapsed;
-        }
     }
 }

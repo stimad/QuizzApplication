@@ -10,6 +10,7 @@ namespace QuizApp
         public InstructorExpandedFragment()
         {
             InitializeComponent();
+            DataContext = new InstructorExpandedFragmentVM();
         }
     }
 }

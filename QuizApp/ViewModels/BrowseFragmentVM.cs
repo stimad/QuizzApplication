@@ -10,6 +10,8 @@ namespace QuizApp
         public ICommand SetBrowseOverviewFragment { get; set; }
         public ICommand SetCategoriesFragment { get; set; }
         public ICommand SetInstructorsFragment { get; set; }
+        public ICommand SetSchoolsFragment { get; set; }
+        public ICommand SetLibraryFragment { get; set; }
 
         public BrowseFragmentVM()
         {
@@ -17,6 +19,8 @@ namespace QuizApp
             SetBrowseOverviewFragment = new ActionCommand(setBrowseOverviewFragment, canExecuteMethod);
             SetCategoriesFragment = new ActionCommand(setCategoriesFragment, canExecuteMethod);
             SetInstructorsFragment = new ActionCommand(setInstructorsFragment, canExecuteMethod);
+            SetSchoolsFragment = new ActionCommand(setSchoolsFragment, canExecuteMethod);
+            SetLibraryFragment = new ActionCommand(setLibraryFragment, canExecuteMethod);
         }
 
         private bool canExecuteMethod(object parameter) => true;
@@ -35,6 +39,14 @@ namespace QuizApp
         private void setInstructorsFragment(object parameter)
         {
             ViewModel = new InstructorsCardContainerVM();
+        }
+        private void setSchoolsFragment(object parameter)
+        {
+            ViewModel = new SchoolsFragmentVM();
+        }
+        private void setLibraryFragment(object parameter)
+        {
+            ViewModel = new LibraryFragmentVM();
         }
     }
 }

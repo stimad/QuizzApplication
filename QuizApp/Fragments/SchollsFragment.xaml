@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="QuizApp.InstructorsCardContainer"
+﻿<UserControl x:Class="QuizApp.SchollsFragment"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -66,22 +66,22 @@
             Grid.Column="0"
             VerticalScrollBarVisibility="Auto">
                 <Grid  x:Name="MyGrid">
-                    <ItemsControl ItemsSource="{Binding Instructors}">
+                    <ItemsControl ItemsSource="{Binding Schools}">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
-                                <UniformGrid Columns="3" />
+                                <UniformGrid Columns="4" />
                             </ItemsPanelTemplate>
                         </ItemsControl.ItemsPanel>
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
-                                <Button Click="Butt_Click"
-                                        Padding="5"
+                                <Button
+                                        Padding="15"
                                         Style="{StaticResource CourseCardButton}"
                                         x:Name="Butt">
-                                        <WrapPanel>
-                                            <local:InstructorCard />
-                                        </WrapPanel>
-                                    </Button>
+                                    <WrapPanel>
+                                        <Image Source="{Binding SchoolImagePath, FallbackValue={StaticResource DefaultImage}}" />
+                                    </WrapPanel>
+                                </Button>
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>

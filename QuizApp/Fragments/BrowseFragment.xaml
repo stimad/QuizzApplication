@@ -44,10 +44,10 @@
                                 HorizontalContentAlignment="Left" Padding="0" Command="{Binding SetInstructorsFragment}"/>
                     <Button Grid.Column="4" Content="Schools" Margin="5" Background="{x:Null}" Click="tabButton_Clicked"
                                 BorderBrush="{x:Null}" Foreground="Gray" Uid="4" x:Name="schoolsTabButton"
-                                HorizontalContentAlignment="Left" Padding="0"/>
-                    <Button Grid.Column="5" Content="Shop" Margin="5" Background="{x:Null}" Click="tabButton_Clicked"
+                                HorizontalContentAlignment="Left" Padding="0" Command="{Binding SetSchoolsFragment}"/>
+                    <Button Grid.Column="5" Content="Library" Margin="5" Background="{x:Null}" Click="tabButton_Clicked"
                                 BorderBrush="{x:Null}" Foreground="Gray" Uid="5" x:Name="shopTabButton"
-                                HorizontalContentAlignment="Left" Padding="0"/>
+                                HorizontalContentAlignment="Left" Padding="0" Command="{Binding SetLibraryFragment}"/>
                     <Button Grid.Column="6" Content="Contact" Margin="5" Background="{x:Null}" Click="tabButton_Clicked"
                                 BorderBrush="{x:Null}" Foreground="Gray" Uid="6" x:Name="contactTabButton"
                                 HorizontalContentAlignment="Left" Padding="0"/>

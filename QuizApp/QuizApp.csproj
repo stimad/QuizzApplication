@@ -109,6 +109,9 @@
     <Compile Include="CustomControls\DashboardCoursesItem.xaml.cs">
       <DependentUpon>DashboardCoursesItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\LibraryItem.xaml.cs">
+      <DependentUpon>LibraryItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\PopularCoursesListItem.xaml.cs">
       <DependentUpon>PopularCoursesListItem.xaml</DependentUpon>
     </Compile>
@@ -124,9 +127,11 @@
     <Compile Include="DataModels\CourseContentDataModel.cs" />
     <Compile Include="DataModels\CourseLessonsDataModel.cs" />
     <Compile Include="DataModels\CourseListItem.cs" />
+    <Compile Include="DataModels\LibraryItemDataModel.cs" />
     <Compile Include="DataModels\LoginDataModel.cs" />
     <Compile Include="DataModels\Message.cs" />
     <Compile Include="DataModels\ResponseDataModel.cs" />
+    <Compile Include="DataModels\SchoolsDataModel.cs" />
     <Compile Include="DataModels\SignUpDataModel.cs" />
     <Compile Include="DataModels\TopInstructorsDataModel.cs" />
     <Compile Include="DeleteMe.cs" />
@@ -172,8 +177,14 @@
     <Compile Include="Fragments\InstructorsCardContainer.xaml.cs">
       <DependentUpon>InstructorsCardContainer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Fragments\LibraryFragment.xaml.cs">
+      <DependentUpon>LibraryFragment.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Fragments\MessageFragment.xaml.cs">
       <DependentUpon>MessageFragment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\SchollsFragment.xaml.cs">
+      <DependentUpon>SchollsFragment.xaml</DependentUpon>
     </Compile>
     <Compile Include="Fragments\SignUpUserDetailsFragment.xaml.cs">
       <DependentUpon>SignUpUserDetailsFragment.xaml</DependentUpon>
@@ -200,8 +211,10 @@
     <Compile Include="ViewModels\InstructorExpandedFragmentVM.cs" />
     <Compile Include="ViewModels\InstructorPlanFragmentVM.cs" />
     <Compile Include="ViewModels\InstructorsCardContainerVM.cs" />
+    <Compile Include="ViewModels\LibraryFragmentVM.cs" />
     <Compile Include="ViewModels\MainWindowVM.cs" />
     <Compile Include="ViewModels\MessageFragmentVM.cs" />
+    <Compile Include="ViewModels\SchoolsFragmentVM.cs" />
     <Compile Include="ViewModels\SecondSignUpVM.cs" />
     <Compile Include="ViewModels\UserPerformanceListItemVM.cs" />
     <Compile Include="ViewModels\VotingStarsVM.cs" />
@@ -234,6 +247,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CustomControls\DashboardCoursesItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\LibraryItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -305,7 +322,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Fragments\LibraryFragment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Fragments\MessageFragment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fragments\SchollsFragment.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -456,6 +481,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\personImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\download.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
