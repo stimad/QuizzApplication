@@ -33,7 +33,6 @@ namespace QuizApp
             TeacherImage = "../images/avatar.png";
             TeacherProfession = "Instructor";
             TeacherName = "Ben";
-            //VotingMark = 4;
             ReviewNaumber = "(7 reviews)";
             CourseImage = "../images/courseImage.jpg";
             CourseDescription = "Lorem Ipsum ....";
@@ -81,7 +80,37 @@ namespace QuizApp
                 }
               
             };
-
+            SimilarCourses = new ObservableCollection<CourseListItem>()
+            {
+                new CourseListItem()
+                {
+                    CourseName = "C# Advanced Level",
+                    CoursePrice = "$120",
+                    ImagePath = "../images/courseImage.jpg"
+                },
+                new CourseListItem()
+                {
+                    CourseName = "C# Advanced Level",
+                    CoursePrice = "$120",
+                    ImagePath = "../images/courseImage.jpg"
+                },
+                new CourseListItem()
+                {
+                    CourseName = "C# Advanced Level",
+                    CoursePrice = "$120",
+                    ImagePath = "../images/courseImage.jpg"
+                }
+            };
+            var mCourseCategories = new ObservableCollection<string>();
+            foreach (string course in Constants.CourseCategories)
+                mCourseCategories.Add(course);
+            CourseCategories = mCourseCategories;
+            CoursePrice = "$100";
+            Duration = "19 days";
+            Lectures = "15 Lectures";
+            VideoDuration = "11h";
+            Certificate = "Certificated";
+            NumberOfStudents = "25 Students";
         }
     }
 }

@@ -50,7 +50,7 @@
                                 HorizontalContentAlignment="Left" Padding="0" Command="{Binding SetLibraryFragment}"/>
                     <Button Grid.Column="6" Content="Contact" Margin="5" Background="{x:Null}" Click="tabButton_Clicked"
                                 BorderBrush="{x:Null}" Foreground="Gray" Uid="6" x:Name="contactTabButton"
-                                HorizontalContentAlignment="Left" Padding="0"/>
+                                HorizontalContentAlignment="Left" Padding="0" Command="{Binding SetContactFragment}"/>
                     <Grid x:Name="tabUnderliner0" Background="#2D3F50" Height="25" Width="2" 
                               VerticalAlignment="Center" HorizontalAlignment="Left" />
                     <Grid x:Name="tabUnderliner1" Background="#2D3F50" Height="25" Width="2" VerticalAlignment="Center" 

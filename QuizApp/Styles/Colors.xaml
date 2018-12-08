@@ -6,4 +6,10 @@
 
     <Color x:Key="WindowBorderCoor" >#21283E</Color>
     <SolidColorBrush x:Key="WindowBorderCoorBrush" Color="{StaticResource WindowBorderCoor}"/>
+
+    <Color x:Key="PurpleLighter" >#2f577f</Color>
+    <SolidColorBrush x:Key="PurpleLighterCoorBrush" Color="{StaticResource PurpleLighter}"/>
+
+    <Color x:Key="DarkBlue" >#103f6e</Color>
+    <SolidColorBrush x:Key="DarkBlueCoorBrush" Color="{StaticResource DarkBlue}"/>
 </ResourceDictionary>

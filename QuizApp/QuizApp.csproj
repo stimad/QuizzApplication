@@ -147,6 +147,9 @@
     <Compile Include="Fragments\CategoriesCardContainer.xaml.cs">
       <DependentUpon>CategoriesCardContainer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Fragments\ContactFragment.xaml.cs">
+      <DependentUpon>ContactFragment.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Fragments\CourseCardsContainer.xaml.cs">
       <DependentUpon>CourseCardsContainer.xaml</DependentUpon>
     </Compile>
@@ -199,6 +202,7 @@
     <Compile Include="ViewModels\CategoriesCardGridVM.cs" />
     <Compile Include="ViewModels\CategoriesCardVM.cs" />
     <Compile Include="ViewModels\Commands\ActionCommand.cs" />
+    <Compile Include="ViewModels\ContactFragmentVM.cs" />
     <Compile Include="ViewModels\CourseCardGridVM.cs" />
     <Compile Include="ViewModels\CourseCardVM.cs" />
     <Compile Include="ViewModels\CourseCategoryVM.cs" />
@@ -279,6 +283,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Fragments\CategoriesCardContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fragments\ContactFragment.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -445,6 +453,9 @@
     <Resource Include="Fonts\Lato-SemiboldItalic.ttf" />
     <Resource Include="Fonts\Lato-Thin.ttf" />
     <Resource Include="Fonts\Lato-ThinItalic.ttf" />
+    <Resource Include="Fonts\Font Awesome 5 Brands-Regular-400.otf" />
+    <Resource Include="Fonts\Font Awesome 5 Free-Regular-400.otf" />
+    <Resource Include="Fonts\Font Awesome 5 Free-Solid-900.otf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

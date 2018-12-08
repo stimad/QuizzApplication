@@ -3,4 +3,5 @@
                     xmlns:local="clr-namespace:QuizApp">
     <FontFamily x:Key="LatoRegular" >pack://aplication,,,/Fonts/#Lato Regular</FontFamily>
     <FontFamily x:Key="LatoThin" >pack://aplication,,,/Fonts/#Lato Thin</FontFamily>
+    <FontFamily x:Key="FontAwesomeFontFamily">pack://aplication,,,/Fonts/#FontAwesome</FontFamily>
 </ResourceDictionary>

@@ -31,5 +31,8 @@
     <DataTemplate DataType="{x:Type local:LibraryFragmentVM}">
         <local:LibraryFragment />
     </DataTemplate>
+    <DataTemplate DataType="{x:Type local:ContactFragmentVM}">
+        <local:ContactFragment />
+    </DataTemplate>
     
 </ResourceDictionary>
